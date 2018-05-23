@@ -1,0 +1,28 @@
+<div class="container text-right border-right">
+  <h5><a [routerLink]="['/product']">Home</a></h5>
+</div>
+
+<div class="container">  
+  <h3>Edit {{ product.name }} </h3>   
+  <form (submit)="onSubmit()" class="border-left">
+      <strong>Name:</strong>
+      <p><input type="text" name="product.name" [(ngModel)]="product.name" /></p>
+        <div *ngIf="errors">
+          {{ errors }}
+        </div>
+      <hr>
+      <strong>Quantity:</strong>
+      <p><input type="text" name="product.quantity" [(ngModel)]="product.quantity" /></p>
+      <hr>
+      <strong>Price: </strong>
+      <p><input type="text" name="product.price" [(ngModel)]="product.price" /></p>
+      <hr>
+      
+          <button (click)="goHome()">Reset</button>
+          <input type="submit" value="Update" />
+
+  </form>
+
+
+
+</div>

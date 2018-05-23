@@ -1,0 +1,37 @@
+<div class="container text-right border-right">
+  <h5><a [routerLink]="['/product']">Home</a></h5>
+</div>
+
+<div class="container">  
+  <div *ngIf="errors.name">
+    {{ errors.name.message }}
+  </div> 
+  <div *ngIf="errors.quantity">
+    {{ errors.quantity.message }}
+  </div>
+  <div *ngIf="errors.price">
+    {{ errors.price.message }}
+  </div>
+
+  <form (submit)="onSubmit()" class="border-left">
+      <strong>Name:</strong>
+      <p><input type="text" name="newProduct.name" [(ngModel)]="newProduct.name" /></p>
+      <hr>
+
+      <strong>Qty:</strong>
+      <p><input type="number" name="newProduct.quantity" [(ngModel)]="newProduct.quantity" /></p>
+      <hr>
+
+      <strong>Price: </strong>
+      <p><input type="number" name="newProduct.price" [(ngModel)]="newProduct.price" /></p>
+      <hr>
+      
+      
+      <button (click)="refresh()">Reset</button>
+
+      <input type="submit" value="Create" /> 
+  </form>
+
+
+
+</div>

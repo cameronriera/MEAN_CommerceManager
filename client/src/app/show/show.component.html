@@ -1,0 +1,14 @@
+<div class="container text-right border-right">
+  <h5><a [routerLink]="['/product']">Home</a></h5>
+</div>
+
+<div class="container border-left">
+  <h3>Details about {{ product.name }}</h3>
+    <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+    <p><strong>Price:</strong> ${{ product.price }}</p>
+    <p>
+      <button (click)="removePet()">Delete</button>
+      <!-- <button [disabled]="liked" (click)="like()">Like this pet</button> -->
+    </p>
+    
+</div>
