@@ -5,11 +5,18 @@
 <div class="container">  
   <h3>Edit {{ product.name }} </h3>   
   <form (submit)="onSubmit()" class="border-left">
+      <div *ngIf="errors.name">
+          {{ errors.name.message }}
+      </div> 
+      <div *ngIf="errors.quantity">
+        {{ errors.quantity.message }}
+      </div>
+      <div *ngIf="errors.price">
+        {{ errors.price.message }}
+      </div>
+
       <strong>Name:</strong>
       <p><input type="text" name="product.name" [(ngModel)]="product.name" /></p>
-        <div *ngIf="errors">
-          {{ errors }}
-        </div>
       <hr>
       <strong>Quantity:</strong>
       <p><input type="text" name="product.quantity" [(ngModel)]="product.quantity" /></p>
@@ -17,9 +24,9 @@
       <strong>Price: </strong>
       <p><input type="text" name="product.price" [(ngModel)]="product.price" /></p>
       <hr>
-      
-          <button (click)="goHome()">Reset</button>
-          <input type="submit" value="Update" />
+  
+      <button type="button" (click)="reset()">Reset</button>
+      <input type="submit" value="Update" />
 
   </form>
 

@@ -49,10 +49,10 @@ module.exports = {
             name: req.body.name, 
             quantity: req.body.quantity, 
             price: req.body.price
-        }, (err, products) => {
+        }, {runValidators: true, context:'query'}, (err, products) => {
             if (err) {
                 console.log(err);
-                res.status(400).json(err.errors);
+                res.status(400).json({message : "Error", err : err.errors});
             } else {
                 console.log("Successfully updated data!");
                 res.json(products);

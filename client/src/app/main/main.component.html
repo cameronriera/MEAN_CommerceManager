@@ -5,7 +5,6 @@
     <table class="table table-striped text-justify table-bordered">
       <thead>
         <tr>
-          <th scope="col">id</th>
           <th scope="col">Name</th>
           <th scope="col">Qty</th>
           <th scope="col">Price</th>
@@ -14,7 +13,6 @@
       </thead>
       <tbody>
         <tr *ngFor="let product of products">
-          <td>{{ product._id }}</td>
           <td>{{ product.name }}</td>
           <td>{{ product.quantity }} </td>
           <td>${{ product.price }} </td>
@@ -25,7 +23,8 @@
         </tr>
       </tbody>
   </table>
+
+
   
-  
-  </div>
+</div>
 

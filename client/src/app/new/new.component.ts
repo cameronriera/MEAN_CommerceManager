@@ -12,11 +12,16 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 export class NewComponent implements OnInit {
   newProduct: any;
   errors: any;
+  temp: any;
   constructor(private _taskService: TaskService, 
     private _route: ActivatedRoute, 
     private _router: Router) { 
       this.newProduct = new Product();    
       this.errors = [];
+      this.temp = {
+        user: '',
+        password: ''
+      }
     }
     
   ngOnInit() {
@@ -37,8 +42,8 @@ export class NewComponent implements OnInit {
 
   }
 
-  refresh() {
-    this._router.navigate(['/product/new'])
+  reset() {
+    this.newProduct = this.temp;
   }
 
   goHome() {

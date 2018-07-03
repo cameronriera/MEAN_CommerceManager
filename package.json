@@ -4,6 +4,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "animate.css": "^3.6.1",
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "express-flash": "0.0.2",
@@ -11,10 +12,14 @@
     "express-session": "^1.15.6",
     "flash": "^1.1.0",
     "install": "^0.11.0",
+    "mocha": "^5.2.0",
     "mongoose": "^5.0.17",
     "mongoose-unique-validator": "^2.0.1",
     "socket.io": "^2.1.0",
     "unpm": "^1.5.0",
     "uuid": "^3.2.1"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }

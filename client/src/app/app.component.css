@@ -1,3 +1,13 @@
 .container {
     margin-top: 40px;
 }
+
+#resizeimg {
+    max-width: 25%;
+    min-width: 25%;
+    display: inline;
+}
+
+
+
+

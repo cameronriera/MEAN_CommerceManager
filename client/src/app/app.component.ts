@@ -10,15 +10,17 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'app';
+  cowPath = 'assets/images/cow9.png';
   constructor(
     private _route: ActivatedRoute,
     private _router: Router
-  ) {}
+  ) {
+  }
   ngOnInit() {
     this._route.params.subscribe((params: Params) => console.log(params['id']));
   }
   goHome() {
-    this._router.navigate(['/pet']);
+    this._router.navigate(['/product']);
   }
  
 }
